@@ -4,6 +4,7 @@
 	"description": "Webpack 4 setup based on a preset model",
 	"main": "index.js",
 	"scripts": {
+		"start": "npm run dev:dash",
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"webpack": "webpack --config __webpack__/webpack.config.js",
 		"webpack-server": "webpack-dev-server --config __webpack__/webpack.config.js",
@@ -31,6 +32,7 @@
 	"devDependencies": {
 		"@babel/core": "^7.7.7",
 		"@babel/preset-env": "^7.7.7",
+		"@babel/preset-react": "^7.8.3",
 		"@babel/register": "^7.7.7",
 		"babel-loader": "^8.0.6",
 		"clean-webpack-plugin": "^3.0.0",
@@ -47,5 +49,9 @@
 		"webpack-dashboard": "^3.2.0",
 		"webpack-dev-server": "^3.10.1",
 		"webpack-merge": "^4.2.2"
+	},
+	"dependencies": {
+		"react": "^16.12.0",
+		"react-dom": "^16.12.0"
 	}
 }

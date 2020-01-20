@@ -5,14 +5,15 @@
 	"main": "index.js",
 	"scripts": {
 		"start": "npm run dev:dash",
-		"test": "echo \"Error: no test specified\" && exit 1",
+		"test": "npm run jest",
 		"webpack": "webpack --config __webpack__/webpack.config.js",
 		"webpack-server": "webpack-dev-server --config __webpack__/webpack.config.js",
 		"dev": "npm run webpack-server -- --env.mode development --hot --open",
 		"dev:dash": "webpack-dashboard -- npm run dev",
 		"prod": "npm run webpack -- --env.mode production",
 		"prod:analyze": "npm run prod -- --env.presets analyze",
-		"prod:compress": "npm run prod -- --env.presets compress"
+		"prod:compress": "npm run prod -- --env.presets compress",
+		"jest": "jest"
 	},
 	"repository": {
 		"type": "git",
@@ -34,6 +35,7 @@
 		"@babel/preset-env": "^7.7.7",
 		"@babel/preset-react": "^7.8.3",
 		"@babel/register": "^7.7.7",
+		"babel-jest": "^24.9.0",
 		"babel-loader": "^8.0.6",
 		"clean-webpack-plugin": "^3.0.0",
 		"compression-webpack-plugin": "^3.0.1",
@@ -41,6 +43,7 @@
 		"css-loader": "^3.4.0",
 		"html-loader": "^0.5.5",
 		"html-webpack-plugin": "^3.2.0",
+		"jest": "^24.9.0",
 		"mini-css-extract-plugin": "^0.9.0",
 		"style-loader": "^1.1.2",
 		"webpack": "^4.41.5",

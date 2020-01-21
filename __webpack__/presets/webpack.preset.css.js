@@ -3,37 +3,37 @@
  * @param env {Object}
  * @param env.mode {String} - production | development
  */
-module.exports = ({mode}) => {
-	const commonLoaders = ["css-loader"]
+module.exports = ({ mode }) => {
+  const commonLoaders = ["css-loader"];
 
-	let additionalConfig = {},
-	    loaders          = []
+  let additionalConfig = {},
+    loaders = [];
 
-	if (mode === 'production') {
-		const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+  if (mode === "production") {
+    const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
-		additionalConfig = {
-			plugins: [new MiniCssExtractPlugin({
-				filename: "[name]-[chunkhash].css",
-			})]
-		}
+    additionalConfig = {
+      plugins: [
+        new MiniCssExtractPlugin({
+          filename: "[name]-[chunkhash].css"
+        })
+      ]
+    };
 
-		loaders = [MiniCssExtractPlugin.loader, ...commonLoaders]
+    loaders = [MiniCssExtractPlugin.loader, ...commonLoaders];
+  } else {
+    loaders = ["style-loader", ...commonLoaders];
+  }
 
-	} else {
-		loaders = ["style-loader", ...commonLoaders]
-	}
-
-
-	return {
-		module: {
-			rules: [
-				{
-					test: /\.css$/,
-					use : loaders
-				}
-			]
-		},
-		...additionalConfig
-	}
-}
+  return {
+    module: {
+      rules: [
+        {
+          test: /\.css$/,
+          use: loaders
+        }
+      ]
+    },
+    ...additionalConfig
+  };
+};

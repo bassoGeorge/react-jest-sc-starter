@@ -1,3 +1,3 @@
-const buildConfig = require('./jest.utils').buildConfig
+const buildConfig = require("./jest.utils").buildConfig;
 
-module.exports = buildConfig(["unit", "integration"])
+module.exports = buildConfig(["unit", "integration"]);

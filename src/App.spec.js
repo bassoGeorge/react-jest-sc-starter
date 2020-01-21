@@ -1,9 +1,9 @@
-import {render, screen} from '@testing-library/react'
-import {App} from './App'
-import React from 'react'
+import { render, screen } from "@testing-library/react";
+import { App } from "./App";
+import React from "react";
 
 it("Works", () => {
-	render(<App/>);
+  render(<App />);
 
-	expect(screen.queryByText("Hello World!")).toBeTruthy()
-})
+  expect(screen.queryByText("Hello World!")).toBeTruthy();
+});

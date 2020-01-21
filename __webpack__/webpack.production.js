@@ -1,7 +1,5 @@
-const CleanWebpackPlugin = require('clean-webpack-plugin').CleanWebpackPlugin;
+const CleanWebpackPlugin = require("clean-webpack-plugin").CleanWebpackPlugin;
 
 module.exports = env => ({
-	plugins: [
-		new CleanWebpackPlugin()
-	]
-})
+  plugins: [new CleanWebpackPlugin()]
+});

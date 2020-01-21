@@ -17,8 +17,8 @@
     "prod:analyze": "npm run prod -- --env.presets analyze",
     "prod:compress": "npm run prod -- --env.presets compress",
     "jest": "jest",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
+    "storybook": "start-storybook -c __storybook__ -p 6006",
+    "build-storybook": "build-storybook -c __storybook__",
     "prettier": "prettier",
     "format-staged-files": "pretty-quick --staged"
   },

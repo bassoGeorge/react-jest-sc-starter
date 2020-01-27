@@ -2,7 +2,7 @@ const path = require("path");
 
 const commonSetup = {
   rootDir: path.resolve(__dirname, "../"),
-  setupFilesAfterEnv: ["<rootDir>/__jest__/jest.test-setup.js"]
+  setupFilesAfterEnv: ["<rootDir>/.jest/jest.test-setup.js"]
 };
 
 const allProjects = {

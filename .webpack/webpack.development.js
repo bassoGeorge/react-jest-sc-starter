@@ -5,6 +5,7 @@ module.exports = env => ({
     stats: "errors-only",
     host: process.env.HOST, // Defaults to `localhost`
     port: process.env.PORT, // Defaults to 8080
+    historyApiFallback: true,
     open: true,
     overlay: true
   },

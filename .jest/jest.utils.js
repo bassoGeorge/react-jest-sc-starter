@@ -19,7 +19,7 @@ const allProjects = {
   integration: {
     ...commonSetup,
     displayName: "Integration Tests",
-    testRegex: "(integrationTests|src)/.*\\.int\\.jsx?$"
+    testRegex: "(integrationTests|src)/.*\\.int\\.test\\.jsx?$"
   }
 };
 

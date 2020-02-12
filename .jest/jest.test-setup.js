@@ -1,1 +1,1 @@
-console.log(">>>> Setting up tests <<<<");
+import "@testing-library/jest-dom";

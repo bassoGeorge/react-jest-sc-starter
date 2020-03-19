@@ -14,12 +14,17 @@ const allProjects = {
   unit: {
     ...commonSetup,
     displayName: "Unit Tests",
-    testRegex: "src/.*\\.spec\\.jsx?$"
+    testRegex: "src/.*(?<!\\.int)\\.(spec|test)\\.jsx?$"
   },
   integration: {
     ...commonSetup,
     displayName: "Integration Tests",
-    testRegex: "(integrationTests|src)/.*\\.int\\.test\\.jsx?$"
+    testRegex: "(otherTests/integration|src)/.*\\.int\\.test\\.jsx?$"
+  },
+  storySnapshots: {
+    ...commonSetup,
+    displayName: "Storybook Tests",
+    testRegex: "otherTests/storybook/.*\\.test\\.jsx?$"
   }
 };
 

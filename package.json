@@ -40,6 +40,8 @@
   "homepage": "https://github.com/bassoGeorge/webpack4-starter#readme",
   "devDependencies": {
     "@babel/core": "^7.7.7",
+    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.8.3",
+    "@babel/plugin-proposal-optional-chaining": "^7.8.3",
     "@babel/plugin-transform-runtime": "^7.8.3",
     "@babel/preset-env": "^7.7.7",
     "@babel/preset-react": "^7.8.3",

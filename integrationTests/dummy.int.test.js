@@ -1,3 +1,4 @@
 it("Runs an integration test", () => {
-  expect(true).toBeTruthy();
+  const data = { item: "Hello" };
+  expect(data?.nullish ?? "Operator").toEqual("Operator");
 });

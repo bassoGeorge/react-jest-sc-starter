@@ -20,7 +20,8 @@
     "storybook": "start-storybook -c .storybook -p 6006",
     "build-storybook": "build-storybook -c .storybook",
     "prettier": "prettier",
-    "format-staged-files": "pretty-quick --staged"
+    "format-staged-files": "pretty-quick --staged",
+    "check-for-micro-commits": "echo \"--- checking for any unpushed [MICRO] commits ---\"; ! (git log @{u}.. --oneline | grep -c \"\\[MICRO\\]\")"
   },
   "repository": {
     "type": "git",
@@ -80,8 +81,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm test && npm run format-staged-files",
-      "pre-push": "npm test"
+      "pre-commit": "npm run format-staged-files && npm test",
+      "pre-push": "npm run check-for-micro-commits && npm test"
     }
   }
 }

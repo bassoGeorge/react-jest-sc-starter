@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "npm run dev:dash",
-    "test": "npm run test:all",
+    "test": "npm run test:watch",
+    "test:watch": "npm run test:all -- --watch",
     "test:unit": "npm run jest -- --config .jest/jest.unit.config.js",
     "test:int": "npm run jest -- --config .jest/jest.integration.config.js",
     "test:storybook": "npm run jest -- --config .jest/jest.storybook.config.js",
@@ -90,8 +91,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run format-staged-files && npm test",
-      "pre-push": "npm run check-for-micro-commits && npm test"
+      "pre-commit": "npm run format-staged-files && npm run test:all",
+      "pre-push": "npm run check-for-micro-commits && npm run test:all"
     }
   }
 }
